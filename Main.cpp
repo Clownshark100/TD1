@@ -18,8 +18,16 @@ int main()
 	//C'est à vous de voir si vous devez allouer dynamiquement ou non les élèments
 
 	//1-  Creez 15 objets du classe produit
-    
-    
+
+	Produit banane("banane",1322,15.0);
+	Produit avocat("avocat", 233, 1.0);
+
+	Client tom("Tom","Jedusor",666,"Get Shreked",1212);
+
+	tom.acheter(&banane);
+	tom.acheter(&avocat);
+
+	tom.afficherPanier();
     
 	//2-  Modifiez le nom, la référence, le prix de  troisieme objet Produit créé
     //   afficher les attributs de cet objet Produit
