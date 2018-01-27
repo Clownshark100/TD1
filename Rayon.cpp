@@ -36,18 +36,18 @@ void Rayon :: ajouterProduit(Produit * produit)
 	}
 	else
 	{
-		Produit** nouvelleListe = new Produit*[capaciteProduits_ + 5]; // creer une nouvelle liste avec une capacite augmentee de 5
+		Produit** nouvelleListe = new Produit*[capaciteProduits_ + 5]; // crée une nouvelle liste avec une capacité augmentée de 5
 
 		for (int i = 0; i < capaciteProduits_; i++) 
-			nouvelleListe[i] = tousProduits_[i]; // transferre les produits de la liste initial a la nouvelle liste
+			nouvelleListe[i] = tousProduits_[i]; // transfère les produits de la liste initiale à la nouvelle liste
 		
-		delete[] tousProduits_; // desaloue la liste initial
+		delete[] tousProduits_; // désalloue la liste initiale
 
-		tousProduits_ = nouvelleListe; // la nouvelle liste devient la liste initial
+		tousProduits_ = nouvelleListe; // la nouvelle liste devient la liste initiale
 
-		capaciteProduits_ += 5; // incremente l'attribut capaciteProduits par 5
+		capaciteProduits_ += 5; // incrémente l'attribut capaciteProduits par 5
 
-		tousProduits_[nombreProduits_++] = produit; // ajout du produit dans la nouvelle liste
+		tousProduits_[nombreProduits_++] = produit; // ajoute le produit dans la nouvelle liste
 	}	
 }
 
@@ -58,7 +58,7 @@ void Rayon::afficher()
 	
 	for (int i = 0; i < nombreProduits_; i++)
 	{
-		(*tousProduits_)[i].afficher();
+		tousProduits_[i]->afficher();
 	}
 }
 
