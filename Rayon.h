@@ -17,6 +17,8 @@ public:
 	// Constructeurs par defaut et par paraametres
     Rayon();
 	Rayon(string cat);
+
+	~Rayon();
    
 	// Methodes d'acces
 	string obtenirCategorie();

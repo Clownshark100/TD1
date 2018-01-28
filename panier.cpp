@@ -5,6 +5,10 @@ Panier::Panier(int capacite)
 
 }
 
+Panier::~Panier() {
+	delete[] contenuPanier_; //Desalloue le tableau de pointeurs
+}
+
 Produit** Panier::obtenirContenuPanier() {
 	return contenuPanier_;
 }
@@ -32,7 +36,7 @@ void Panier::ajouter(Produit* nouveauProduit) {
 		}
 
 		//Deallocation de l'ancienne liste
-		delete contenuPanier_;
+		delete[] contenuPanier_;
 
 		//La nouvelle liste deviens la liste
 		contenuPanier_ = nouvelleListe;
@@ -46,5 +50,25 @@ void Panier::ajouter(Produit* nouveauProduit) {
 	}
 	
 	totalAPayer_ += nouveauProduit->obtenirPrix();
+
+}
+
+void Panier::afficher() {
+	cout << "Votre panier contient " << nombreContenu_ << " produits: " << endl << endl;
+
+	for (int i = 0; i < nombreContenu_; i++) {
+		contenuPanier_[i]->afficher();
+		cout << endl;
+	}
+}
+
+
+void Panier::livrer() {
+
+	delete[] contenuPanier_;
+	contenuPanier_ = new Produit*[capaciteContenu_];
+
+	nombreContenu_ = 0;
+	totalAPayer_ = 0.0;
 
 }

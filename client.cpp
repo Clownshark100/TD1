@@ -58,16 +58,9 @@ void Client::acheter(Produit* produit) {
 
 void Client::afficherPanier() {
 	
-	cout << "Votre panier contient "<< monPanier_->obtenirNombreContenu() << " produits: " << endl << endl;
-
-	for (int i = 0; i < monPanier_->obtenirNombreContenu(); i++) {
-		monPanier_->obtenirContenuPanier()[i]->afficher();
-		cout << endl;
-	}
+	monPanier_->afficher();
 }
 
 void Client::livrerPanier() {
-	
-	delete monPanier_;
-	monPanier_ = nullptr;
+	monPanier_->livrer();
 }

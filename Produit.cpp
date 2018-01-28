@@ -34,7 +34,7 @@ void Produit::modifierPrix(double nouveauPrix) {
 
 void Produit::afficher() {
 
-	cout << "Details pour:" << nom_ << ":" << endl << 
+	cout << "Details pour: " << nom_ << endl << 
 		"reference: " << reference_ << endl << 
-		"prix:" << prix_ << endl;
+		"prix:" << prix_ << "$" << endl;
 }
