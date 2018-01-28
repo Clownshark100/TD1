@@ -13,6 +13,7 @@ class Panier
 {
 public:
     Panier (int capacite);
+	~Panier();
     // methodes d'accès
     Produit **  obtenirContenuPanier();
     int obtenirNombreContenu();

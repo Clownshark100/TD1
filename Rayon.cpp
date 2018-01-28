@@ -4,6 +4,10 @@ Rayon::Rayon() : categorie_("inconnu"), tousProduits_(nullptr), capaciteProduits
 
 Rayon :: Rayon(string cat) : categorie_(cat), tousProduits_(nullptr), capaciteProduits_(0), nombreProduits_(0){}
 
+Rayon ::~Rayon() {
+	delete[] tousProduits_;
+}
+
 string Rayon ::  obtenirCategorie()
 {
 	return categorie_;
@@ -39,7 +43,7 @@ void Rayon :: ajouterProduit(Produit * produit)
 		Produit** nouvelleListe = new Produit*[capaciteProduits_ + 5]; // crée une nouvelle liste avec une capacité augmentée de 5
 
 		for (int i = 0; i < capaciteProduits_; i++) 
-			nouvelleListe[i] = tousProduits_[i]; // transfère les produits de la liste initiale à la nouvelle liste
+			nouvelleListe[i] = tousProduits_[i]; // transfère les pointeurs aux produits de la liste initiale à la nouvelle liste
 		
 		delete[] tousProduits_; // désalloue la liste initiale
 
