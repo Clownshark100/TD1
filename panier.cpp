@@ -9,15 +9,15 @@ Panier::~Panier() {
 	delete[] contenuPanier_; //Desalloue le tableau de pointeurs
 }
 
-Produit** Panier::obtenirContenuPanier() {
+Produit** Panier::obtenirContenuPanier() const {
 	return contenuPanier_;
 }
 
-int Panier::obtenirNombreContenu() {
+int Panier::obtenirNombreContenu() const {
 	return nombreContenu_;
 }
 
-double Panier::obtenirTotalApayer() {
+double Panier::obtenirTotalApayer() const {
 	return totalAPayer_;
 }
 
@@ -53,7 +53,7 @@ void Panier::ajouter(Produit* nouveauProduit) {
 
 }
 
-void Panier::afficher() {
+void Panier::afficher() const {
 	cout << "Votre panier contient " << nombreContenu_ << " produits: " << endl << endl;
 
 	for (int i = 0; i < nombreContenu_; i++) {
