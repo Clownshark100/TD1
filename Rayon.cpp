@@ -8,22 +8,22 @@ Rayon ::~Rayon() {
 	delete[] tousProduits_;
 }
 
-string Rayon ::  obtenirCategorie()
+string Rayon ::  obtenirCategorie() const
 {
 	return categorie_;
 }
 
-Produit** Rayon :: obtenirTousProduits()
+Produit** Rayon :: obtenirTousProduits() const
 {
 	return  tousProduits_;
 }
 
-int Rayon :: obtenirCapaciteProduits()
+int Rayon :: obtenirCapaciteProduits() const
 {
 	return capaciteProduits_;
 }
 
-int Rayon :: obtenirNombreProduits()
+int Rayon :: obtenirNombreProduits() const
 {
 	return nombreProduits_;
 }
@@ -55,7 +55,7 @@ void Rayon :: ajouterProduit(Produit * produit)
 	}	
 }
 
-void Rayon::afficher() 
+void Rayon::afficher() const
 {
 	cout << "Categorie : " << categorie_ << endl << "Nombre de produits : " 
 		<< nombreProduits_ << endl << " Capacite : " << capaciteProduits_ << endl;

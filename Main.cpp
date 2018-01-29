@@ -3,6 +3,14 @@
 * Date: 20 janvier 2018
 * Auteur: Mohammed Esseddik BENYAHIA
 **************************************************/
+/* 
+Question 1 : Quel est le lien (agrégation ou composition) entre la classe Client et la classe Panier ?
+C'est une composition parce que le panier appartient au client et ne peut pas appartenir à un autre client.
+Question 2 : Quel est le lien (agrégation ou composition) entre un Produit et un Rayon ? 
+C'est une agrégaton puisque le produit peut exister sans le rayon, 
+il peut se retrouver dans le panier du client et donc le rayon n'aura pas besoin d'être nécéssairement éxistant.
+
+*/
 
 #include "Produit.h"
 #include "Rayon.h"
@@ -63,7 +71,7 @@ int main()
 	client->livrerPanier();
     
 	//12- afficher le contenu du panier du client
-	// client->afficherPanier();                  //Nullptr erreur
+	client->afficherPanier();                 
 	//13-  terminer le programme correctement
 	delete client;
 	client = nullptr;

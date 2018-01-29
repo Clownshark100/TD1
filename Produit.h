@@ -19,9 +19,9 @@ public:
 	Produit(string nom, int reference, double prix);
 
 	// Methodes d'acces
-	string obtenirNom();
-	int obtenirReference();
-	double obtenirPrix();
+	string obtenirNom() const;
+	int obtenirReference() const;
+	double obtenirPrix() const;
 
 	// Methodes de modification
 	void modifierNom(string nom);
@@ -29,7 +29,7 @@ public:
 	void modifierPrix(double prix);
    
     // autres methodes
-    void afficher();
+    void afficher() const;
    
 private:
 

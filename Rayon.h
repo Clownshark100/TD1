@@ -21,10 +21,10 @@ public:
 	~Rayon();
    
 	// Methodes d'acces
-	string obtenirCategorie();
-	Produit ** obtenirTousProduits();
-    int obtenirCapaciteProduits();
-    int obtenirNombreProduits();
+	string obtenirCategorie() const;
+	Produit ** obtenirTousProduits() const;
+    int obtenirCapaciteProduits() const;
+    int obtenirNombreProduits() const;
 	
 
 	// Methodes de modification
@@ -32,7 +32,7 @@ public:
     
     // autres methodes
     void ajouterProduit (Produit * produit);
-    void afficher();
+    void afficher() const;
 	
 
 private:
