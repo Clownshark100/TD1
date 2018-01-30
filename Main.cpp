@@ -5,10 +5,9 @@
 **************************************************/
 /* 
 Question 1 : Quel est le lien (agrégation ou composition) entre la classe Client et la classe Panier ?
-C'est une composition parce que le panier appartient au client et ne peut pas appartenir à un autre client.
+C'est une composition parce que le panier fait partie intégrale du client et ne peut pas appartenir à un autre client. Cela est mis en évidence par la destruction du Panier dans le destructeur de Client.
 Question 2 : Quel est le lien (agrégation ou composition) entre un Produit et un Rayon ? 
-C'est une agrégaton puisque le produit peut exister sans le rayon, 
-il peut se retrouver dans le panier du client et donc le rayon n'aura pas besoin d'être nécéssairement éxistant.
+C'est une agrégaton puisque le produit peut exister sans le rayon. De ce faut, Rayon ne contient qu'un pointeur aux Produits et seul le tableau de pointeur est désalloué lors de la destruction de Rayon, pas les Produits eux-mêmes.
 
 */
 
@@ -34,20 +33,20 @@ int main()
 	produits[2]->modifierNom("Casquette Sonex");
 	produits[2]->modifierReference(3);
 	produits[2]->modifierPrix(12.99);
-    //   afficher les attributs de cet objet Produit
+	//   afficher les attributs de cet objet Produit
 	produits[2]->afficher();
 	
 	//3-  Creez un objet du classe rayon à l'aide du constructeur par défaut
 	Rayon rayon;
 	//4-  Modifiez la catégorie  du rayon
 	rayon.modifierCategorie("Accessoires");
-    // 5- Ajouter 6 produits de  voret chaoix dans le rayon créé
-    for (int i =0; i < 6; i++)
+	// 5- Ajouter 6 produits de  voret chaoix dans le rayon créé
+    	for (int i =0; i < 6; i++)
 	{
 		rayon.ajouterProduit(produits[i]);
 	}
 
-    // 6- afficher le contenu du rayon
+	// 6- afficher le contenu du rayon
 	rayon.afficher();
   
 	//7-  Creez un objet de classe client à l'aide du constructeur
@@ -67,7 +66,7 @@ int main()
 
 	//10- Afficher le contenu du panier du client
 	client->afficherPanier();
-     //11- livrer le panier du client
+	//11- livrer le panier du client
 	client->livrerPanier();
     
 	//12- afficher le contenu du panier du client
@@ -82,5 +81,5 @@ int main()
 	delete[] produits;
 	produits = nullptr;
 	
-    return 0;
+	return 0;
 }
