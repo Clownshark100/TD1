@@ -13,6 +13,7 @@ class Client
 {
 public:
     Client (string  nom,  string prenom, int identifiant, string codePostal,  long date);
+    ~Client();
     // methodes d'acces
     
     string obtenirNom() const;

@@ -4,7 +4,9 @@ Client::Client(string nom, string prenom, int identifiant, string codePostal, lo
 	: nom_(nom), prenom_(prenom), identifiant_(identifiant), codePostal_(codePostal), dateNaissance_(date), monPanier_(nullptr)
 {
 }
-
+Client::~Client(){
+	delete monPanier_;
+}
 string Client::obtenirNom() const {
 	return nom_;
 }
