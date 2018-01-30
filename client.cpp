@@ -25,23 +25,23 @@ long Client::obtenirDateNaissance() const {
 	return dateNaissance_;
 }
 
-void Client::modifierNom(string nom) {
+void Client::modifierNom(const string nom) {
 	nom_ = nom;
 }
 
-void Client::modifierPrenom(string prenom) {
+void Client::modifierPrenom(const string prenom) {
 	prenom_ = prenom;
 }
 
-void Client::modifierIdentifiant(int identifiant) {
+void Client::modifierIdentifiant(const int identifiant) {
 	identifiant_ = identifiant;
 }
 
-void Client::modifierCodePostal(string codePostal) {
+void Client::modifierCodePostal(const string codePostal) {
 	codePostal_ = codePostal;
 }
 
-void Client::modifierDateNaissance(long date) {
+void Client::modifierDateNaissance(const long date) {
 	dateNaissance_ = date;
 }
 
