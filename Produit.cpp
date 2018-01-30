@@ -20,15 +20,15 @@ double Produit::obtenirPrix() const{
 	return prix_;
 }
 
-void Produit::modifierNom(string nouveauNom) {
+void Produit::modifierNom(const string nouveauNom) {
 	nom_ = nouveauNom;
 }
 
-void Produit::modifierReference(int nouvelleReference) {
+void Produit::modifierReference(const int nouvelleReference) {
 	reference_ = nouvelleReference;
 }
 
-void Produit::modifierPrix(double nouveauPrix) {
+void Produit::modifierPrix(const double nouveauPrix) {
 	prix_ = nouveauPrix;
 }
 
