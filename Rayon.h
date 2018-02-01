@@ -15,8 +15,7 @@ class Rayon
 {
 public:
 	// Constructeurs par defaut et par paraametres
-    Rayon();
-	Rayon(string cat);
+	Rayon(string cat = "inconnu");
 
 	~Rayon();
    

@@ -1,7 +1,5 @@
 #include "Rayon.h"
 
-Rayon::Rayon() : categorie_("inconnu"), tousProduits_(nullptr), capaciteProduits_(0), nombreProduits_(0) {}
-
 Rayon :: Rayon(string cat) : categorie_(cat), tousProduits_(nullptr), capaciteProduits_(0), nombreProduits_(0){}
 
 Rayon ::~Rayon() {
@@ -28,7 +26,7 @@ int Rayon :: obtenirNombreProduits() const
 	return nombreProduits_;
 }
 
-void Rayon::modifierCategorie(string cat)
+void Rayon::modifierCategorie(const string cat)
 {
 	categorie_ = cat;
 }
