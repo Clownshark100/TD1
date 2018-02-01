@@ -1,7 +1,9 @@
 /********************************************
 * Titre: Travail pratique #1 - Produit.h
 * Date: 20 janvier 2018
-* Auteur: Mohammed Esseddik BENYAHIA
+* Auteur: Loic Leblanc et Daniel Nahum
+*
+* La classe Produit permet de creer des instances de produits mis en vente sur le site
 *******************************************/
 
 #ifndef PRODUIT_H

@@ -1,8 +1,10 @@
-
-//  panier.cpp
-//  Created by Martine Bellaiche on 18-01-22.
-//  Copyright © 2018 Martine Bellaiche. All rights reserved.
-//
+/********************************************
+* Titre: Travail pratique #1 - panier.h
+* Date: 20 janvier 2018
+* Auteur: Loic Leblanc et Daniel Nahum
+*
+* La classe Panier range des produits et additionnne leurs prix
+*******************************************/
 
 #include <string>
 #include "Produit.h"

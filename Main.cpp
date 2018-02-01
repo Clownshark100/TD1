@@ -1,7 +1,7 @@
 /**************************************************
 * Titre: Travail pratique #1 - Main.cpp
 * Date: 20 janvier 2018
-* Auteur: Mohammed Esseddik BENYAHIA
+* Auteur: Loic Leblanc et Daniel Nahum
 **************************************************/
 /* 
 Question 1 : Quel est le lien (agrégation ou composition) entre la classe Client et la classe Panier ?
@@ -50,7 +50,7 @@ int main()
 	rayon.afficher();
   
 	//7-  Creez un objet de classe client à l'aide du constructeur
-	Client* client = new Client("of Rivia", "Geralt", 1, "H92 D23", 1997);
+	Client* client = new Client("of Rivia", "Geralt", 1, "H92 D23", 200104);
 
 	//8-  afficher l'etat des attributs du client
 	cout << client->obtenirPrenom() << " " << client->obtenirNom() << endl

@@ -1,8 +1,11 @@
-
-//  client.h
-//  Created by Martine Bellaiche on 18-01-22.
-//  Copyright © 2018 Martine Bellaiche. All rights reserved.
-//
+/********************************************
+* Titre: Travail pratique #1 - client.h
+* Date: 20 janvier 2018
+* Auteur: Loic Leblanc et Daniel Nahum
+*
+* La classe Client permet de ranger les informations des clients et lui 
+* attribue un panier pour qu'il faire ses achats
+*******************************************/
 
 #ifndef CLIENT_H
 #define CLIENT_H
