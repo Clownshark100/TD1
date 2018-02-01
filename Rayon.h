@@ -1,7 +1,10 @@
 /********************************************
 * Titre: Travail pratique #1 -Rayon.h
 * Date: 20 janvier 2018
-* Auteur: 
+* Auteur: Loic Leblanc et Daniel Nahum
+*
+* Rayon classe des objets de type Produit* par categorie
+*
 *******************************************/
 
 #ifndef RAYON_H
